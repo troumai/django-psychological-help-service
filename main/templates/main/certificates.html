@@ -1,0 +1,103 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Gift certificates{% endblock %}
+{% block content %}
+<section class="banner">
+		<div class="banner">
+			<div class="container-bg" style="background-color: #F0F2F5; padding-bottom: 7rem;">
+				<div class="container">
+					<div class="banner-content">
+						<div class="row">
+							<div class="col">
+								<p class="p-header pt-5">The most important gift</p>
+								<br>
+								<div class="banner-text mt-5" width="600">
+									<p class="p-header" style="font-size: 27px; font-weight: normal;">
+										We all need help, but sometimes it's hard to ask for it.
+										Take care of a loved one - present a session with a psychologist for the New Year.
+										We have discounts for the holiday!
+									</p>
+								</div>
+							</div>
+							<div class="col">
+								<div class="banner-img">
+									<img src="{% static 'main/images/gifts-ny@2x-98f3fc3bce52a923a58bf07bcdf71c690e2f30dc84a64c3dd43d805186c0a547.jpg' %}" style="max-width:560px;" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section class="certificates-section">
+	<div class="container-bg" style="background-color: #F0F2F5; padding-bottom: 7rem;">
+		<div class="container">
+			<div class="section-title pt-5 pb-5">
+				You can gift
+			</div>
+			<div class="certificates-box">
+				<div class="row mt-5">
+					{% for el in tariffs %}
+						<div class="col-md-3 col-sm-9 mb-3">
+							<div class="card mb-30">
+								<div class="card-body text-center">
+									<div class="cards-header">
+										<p class="card-title" style="">{{el.sessions_number}}</p>
+										<p class="sessions">sessions</p>
+									</div>
+									<div class="cards-text">
+										<p class="session-text">{{el.text}}</p>
+									</div>
+									<div class="cards-cost">
+										<p class="cost">{{el.cost}}KZT</p>
+									</div>
+									<div class="buy-btn">
+										<a class="" href="#"><button class="btn btn-primary" type="button" style="width: 150px; height: 40px;">Buy</button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					{%endfor%}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<style>
+	.card{
+		font-family: 'Poppins', sans-serif;
+		font-size: 0.8rem;
+		border-radius: 5%;
+		padding-bottom: 0.6rem;
+	}
+	.card-title{
+		font-size:5rem;
+		font-family: 'Montserrat', sans-serif;
+		padding-top:2.5rem;
+	}
+	.sessions{
+		padding-top: 1.5rem;
+		padding-bottom: 2.5rem;
+		font-size:1.3rem;
+		font-family: 'Montserrat', sans-serif;
+
+	}
+	.cards-header{
+		border-bottom: 1.5px solid lightgray;
+	}
+	.cards-text{
+		font-family: 'Roboto', sans-serif;
+		font-weight: lighter;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1.5px solid lightgray;
+	}
+	.cards-cost{
+		font-family: 'Montserrat', sans-serif;
+		font-size: 2rem;
+		padding-top:2rem;
+		padding-bottom: 2rem;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  	<!-- css -->
+  	<link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css'%}">
+  	<!-- fonts -->
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+	<title>It's OK</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <div class="container">
+		    <a class="navbar-brand" href="{% url 'home' %}">
+		    	<img src="{%static 'main/images/flc_design202111056731 (1).png'%}" alt="" width="80">
+		    </a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		      <ul class="navbar-nav d-flex justify-content-end">
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">For therapists</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="{% url 'certificates'%}">Gift certificates</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="{%url 'blog_home'%}">Blog</a>
+		        </li>
+		        {% if user.is_authenticated %}
+					<a class="nav-link" href="#">Hi {{ user.username }}!</a>
+				  	<a class="nav-link" href="{% url 'logout' %}">Log out</a>
+				  {% else %}
+					  <li class="nav-item">
+						  <a class="nav-link" href="{% url 'login' %}">Log in</a>
+					  </li>
+				  {% endif %}
+		      </ul>
+		        <a class="nav-link" href="#">
+		        	<button class="btn btn-primary" type="button" style="width: 150px; height: 40px;">find therapist</button>
+		        </a>
+		    </div>
+		  </div>
+		</nav>
+	</header>
+	<section class="banner">
+		<div class="banner">
+			<div class="container-bg" style="background-color: #F0F2F5; padding-bottom: 7rem;">
+				<div class="container">
+					<div class="banner-content">
+						<div class="row">
+							<div class="col">
+								<p class="p-header pt-5">Working with therapist</p>
+								<br>
+								<div class="banner-slider">
+									<div class="banner-wrapper">
+										<div class="banner-slide" style="color: #45a7f5;"><p class="p-header">to handle the stress</p></div>
+										<!-- <div class="banner-slide">increase the quality of life</div>
+										<div class="banner-slide">improve relations with loved ones</div>
+										<div class="banner-slide">find your vocation</div>
+										<div class="banner-slide">accept yourself</div>
+										<div class="banner-slide">find tranquility</div> -->
+									</div>
+								</div>
+								<div class="banner-action">
+									<a class="btn-link" href="#">
+							        	<button class="btn btn-primary" type="button" style="width: 190px; height: 40px; font-size:1rem;">find therapist</button>
+							        </a>
+							        <p class="banner-therapy-cost">
+							        	10990 KZT for the session, 50min
+							        </p>
+								</div>	
+							</div>
+							<div class="col">
+								<div class="banner-img">
+									<img src="{%static 'main/images/service-item-1-f5e510d2d9636ab752407499ccc9153feb99455f239f853c1ea1c93c4b847112.png'%}" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="statistics" style="border-bottom: 1px solid lightgrey;">
+		<div class="container">
+			<div class="statistics-list-row d-flex justify-content-around flex-wrap mt-5">
+				<div class="statistics-item mb-5">
+					<p class="statistics-value">900</p>
+					<p class="statistics-text pt-2">registrations yesterday</p>
+				</div>
+				<div class="statistics-item mb-5">
+					<p class="statistics-value">15000</p>
+					<p class="statistics-text pt-2">clients</p>
+				</div>
+				<div class="statistics-item mb-5">
+					<p class="statistics-value">600</p>
+					<p class="statistics-text pt-2">therapists</p>
+				</div>
+				<div class="statistics-item mb-5">
+					<p class="statistics-value">100%</p>
+					<p class="statistics-text pt-2">confidentiality</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="helps">
+		<div class="container">
+			<div class="helps-content mt-5">
+				<div class="helps-title">
+					<p class="section-title pt-2" style="line-height: 3.5rem;">
+						<span style="color: #45a7f5">Regular sessions with a psychologist</span>
+						<br>
+						improve the quality of life
+					</p>
+				</div>
+				<div class="helps-list-row d-flex justify-content-around flex-wrap">
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-1-ccd5d1cd6bb901795eb04ee4d09b9d3711d704507e18c3c1b1d636183d62ce1e.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>					
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-2-6ccb20d76d9be5a4495ca71a39e9b5a3c93e352fff2ed515b8fd8e654083c4a6.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>					
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-3-72d5ca33bc62e5c08d9a61940e0d24cd82e11ee1f88cd567b2458a55516c3a08.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>
+				</div>
+			</div>
+			<div class="helps-list-row d-flex justify-content-around flex-wrap pb-5">
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-4-39b3f181f9296db3ef1d5efc37633bb158092cb3789e298139630b365a7a925f.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>					
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-5-d68b8ba57a96afd054a369c4b6bfdbc741a0fbcaceff9f658375ecb513a81d1e.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>					
+					<div class="helps-item pt-5">
+						<div class="helps-img">
+							<img src="{%static 'main/images/helps-item-6-09ec18df4b2d94add4d44beccc38f8f509fc6aeb279b26dba7365a2912c8d470.svg'%}">
+						</div>
+						<div class="helps-text pt-4">Build harmonious relationships with loved ones</div>
+					</div>
+				</div>
+				<div class="helps-action-row d-flex justify-content-around flex-wrap mt-5 pb-5">
+					<a class="btn-link" href="#">
+						<button class="btn btn-primary" type="button" style="width: 300px; height: 50px; font-size:1rem;">I want to discuss my situation</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="review" style="background-color: #F0F2F5; padding-bottom: 7rem; padding-top: 6rem; margin-bottom: 50px">
+		<div class="container">
+			<div class="review-content">
+				<div class="review-title">
+					<p class="section-title pt-2" style="line-height: 3.5rem;">
+						<span style="color: #45a7f5">We have already helped 15,000 clients,</span>
+						<br>
+						and this is what they themselves say about "It’s OK"
+					</p>
+				</div>
+				<div class="carousel slide" data-bs-ride="carousel" id="reviewCarousel">
+					<!-- Indicators -->
+					<!-- <div class="carousel-indicators">
+					    <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active"></button>
+					    <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1"></button>
+					</div> -->
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="carousel-item active" >
+							<div class="review-item" >
+									<div class="review-row d-flex justify-content-center flex-wrap">
+										<div class="review-img">
+											<img src="{%static 'main/images/eugeny-luchinin-87ab250a505be64213c56c6d7431da5a8eb2d09a392361a59142956cc211be8b.jpg'%}" alt="" >
+										</div>
+										
+										<div class="col">
+											<div class="review-item-text">
+												<p class="review-text">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Harum officia alias unde cum et sit, eveniet commodi corporis soluta adipisci! Tempora praesentium officia ratione neque, quibusdam, similique distinctio magni cum. Lorem ipsum dolor, sit amet, consectetur adipisicing elit. 
+												<br>
+												<br>
+												<br>
+												<span class="review-text-span" style="font-weight:bold;">John Doe</span>
+												<br>
+												<br>
+												Photographer
+												</p>
+											</div>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="review-item d-block w-100">
+									<div class="review-row d-flex flex-wrap">
+										<div class="review-img">
+											<img src="{%static 'main/images/sofia-sheveleva-2eaf539f8ed03e6cd69b723e38f6e8dad95b37bc83ddff42b1f4a648727e8ce0.jpg'%}" alt="">
+										</div>
+										
+										<div class="col">
+											<div class="review-item-text">
+												<p class="review-text">Lorem ipsum dolor, sit amet consectetur, adipisicing elit.
+													Harum officia alias unde cum et sit, eveniet commodi corporis soluta adipisci!
+													Tempora praesentium officia ratione neque, quibusdam, similique distinctio magni cum.
+													Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Quam saepe asperiores eveniet explicabo accusantium error.
+												<br>
+												<br>
+												<br>
+												<span class="review-text-span" style="font-weight:bold;">Jane Doe</span>
+												<br>
+												<br>
+												Photographer
+												</p>
+											</div>
+										</div>
+
+								</div>
+							</div>
+						</div>
+
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+				   <span class="carousel-control-prev-icon"></span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+				   <span class="carousel-control-next-icon"></span>
+				</button>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content-row mt-5 mb-5 d-flex justify-content-around flex-wrap">
+				<div class="media-links-col">
+					<div class="copyright-row">
+						<p class="footer-text">
+							&copy; 2021 - 2021 It's OK
+						</p>
+					</div>
+					<div class="media-icons-row d-flex mt-3">
+						<div class="icon-col">
+							<a href="" class="media-link">
+								<img class="icon-img" src="{% static 'main/images/icons8-instagram-50.png' %}" alt="">
+							</a>
+						</div>
+						<div class="icon-col">
+							<a href="#" class="media-link">
+								<img class="icon-img" src="{% static 'main/images/icons8-facebook-circled-50.png' %}" alt="">
+							</a>
+						</div>
+						<div class="icon-col">
+							<a href="#" class="media-link">
+								<img class="icon-img" src="{% static 'main/images/icons8-twitter-squared-50.png' %}" alt="">
+							</a>
+						</div>
+						<div class="icon-col">
+							<a href="#" class="media-link">
+								<img class="icon-img" src="{% static 'main/images/icons8-facebook-messenger-50.png' %}" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="media-links-col">
+					<div class="row">
+						<a href="{%url 'blog_home'%}" class="media-link">Blog</a>
+					</div>
+					<div class="row">
+						<a href="{% url 'therapists'%}" class="media-link">Therapists</a>
+					</div>
+					<div class="row">
+						<a href="{% url 'certificates'%}" class="media-link">Gift certificates</a>
+					</div>
+				</div>
+				<div class="media-links-col">
+					<div class="row">
+						<a href="#" class="media-link">Career</a>
+					</div>
+					<div class="row">
+						<a href="{% url 'contacts'%}" class="media-link">Contacts</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url(reset.css);
+
+.container{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+.nav-brand{
+	margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+.nav-link{
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+}
+.nav-item{
+	margin-right: 4rem;
+}
+.btn{
+	background-color: #45a7f5;
+	border: none;
+	font-size: 0.8rem;
+}
+.btn:hover{
+	background-color: transparent;
+	color:  #45a7f5;
+	border: 1px solid  #45a7f5;
+}
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.p-header{
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+}
+.banner-content{
+	padding-top: 70px;
+}
+.banner-action{
+	margin-top: 100px;
+}
+.btn-link{
+	color: black;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8rem;
+}
+.banner-therapy-cost{
+	font-family: 'Lato', sans-serif;
+	color: #7F868F;
+	font-weight: light;
+	font-size: 0.8rem;
+	padding-top: 5px;
+}
+
+.statistics-value{
+	font-family: 'Lato', sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+.statistics-text{
+	font-family: 'Roboto', sans-serif;
+	color: #7F868F;
+	font-size: 15px;
+	font-weight: lighter;
+	text-align: center;
+}
+.section-title{
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+}
+.helps-item{
+	width: 250px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: light;
+	text-align: center;
+}
+.helps-img img{
+	width: 200px;
+}
+.review-item{
+	height: 350px;
+}
+.review-row{
+	width: 850px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+.review-img img{
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	object-fit: cover;
+}
+.review-text{
+	font-family: 'Roboto', sans-serif;
+	font-size:21px;
+	color: black;
+	text-align: left;
+	padding-left: 70px;
+}
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%45a7f5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%45a7f5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.footer-text{
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8rem;
+}
+.icon-img{
+	width: 30px;
+	height: 30px;	
+	margin-right: 10px;
+}
+.media-link{
+	font-family: 'Roboto', sans-serif;
+	color: #45a7f5;
+	font-size: 0.8rem;
+	text-decoration: none;
+	padding-bottom: 0.8rem;
+}
+.certificates-grey-box{
+
+}
+
+/*-------------contacts.html-----------------------*/
+p .page-title{
+	font-size: 2rem;
+	font-family: 'Roboto', sans-serif;
+}
+contacts-title{
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8rem;
+}
+
+.contacts-link{
+	font-family: 'Poppins', sans-serif;
+}
+/*---------------therapists.html--------------*/
+
+/*-----------------certificates--------------------*/

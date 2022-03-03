@@ -1,0 +1,34 @@
+{% extends 'main/layout.html' %}
+{% block title %}Blog create{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="main-content-header d-flex justify-content-between flex-wrap">
+            <p class="page-title mt-5 " style="font-size: 2rem; font-family: 'Roboto', sans-serif;">New article</p>
+        </div>
+        <br>
+        <hr>
+        <!-- Устанавливаем multipart/form-data -->
+        <div class="main-content" style="max-width: 600px; text-align: center;" >
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <!-- Выводим каждое поле формы в отдельном параграфе -->
+                {{ form.title }}<br>
+                {{ form.author }}<br>
+                {{ form.date }}<br>
+                {{ form.anons }}<br>
+                {{ form.full_text }}<br>
+                {{ form.picture }}<br>
+                <button class="btn btn-success" type="submit">Save</button>
+            </form>
+
+            <!-- Выводим уже созданные записи -->
+            {% for b in articles %}
+            <p>{{ b.title }}</p>
+            <img src="{{ b.picture.url }}" width="100px">
+            <!-- Выводим размер картинки -->
+            <p>Оригинальный размер картинки  {{ b.picture.width }}x{{ b.picture.height }}</p>
+            <br/>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

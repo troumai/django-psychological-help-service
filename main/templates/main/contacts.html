@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% block title %}Contacts{% endblock %}
+{% block content %}
+    <div class="container">
+        <p class="page-title mt-5" style="font-size: 2rem; font-family: 'Roboto', sans-serif;">Contacts</p>
+        <br>
+        <hr>
+        <div class="box mt-5">
+            <div class="row">
+                <div class="col">
+                    <p class="contacts-title" style="font-family: 'Poppins', sans-serif; font-size: 0.8rem;">{{chat.title}}</p>
+                </div>
+                <div class="col">
+                    <a class="contacts-link">{{chat.email}}</a>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <p class="contacts-title" style="font-family: 'Poppins', sans-serif; font-size: 0.8rem;">{{cooperation.title}}</p>
+                </div>
+                <div class="col">
+                    <a class="contacts-link">{{cooperation.email}}</a>
+                    <br>
+                    <a class="contacts-link">{{cooperation.phone}}</a>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <p class="contacts-title" style="font-family: 'Poppins', sans-serif; font-size: 0.8rem;">{{career.title}}</p>
+                </div>
+                <div class="col">
+                    <a class="contacts-link">{{career.email}}</a>
+                    <br>
+                    <a class="contacts-link">{{career.phone}}</a>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="map-box">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

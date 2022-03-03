@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+{% block title %}Adding therapist form{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="main-content-header">
+            <p class="page-title mt-5 " style="font-size: 2rem; font-family: 'Roboto', sans-serif;">Adding therapist form</p>
+        </div>
+        <br>
+        <hr>
+        <div class="main-content" style="max-width: 400px; text-align: center">
+            <form method="post">
+                {%csrf_token%}<br>
+                {{form.photo}}<br>
+                {{form.firstname}} <br>
+                {{form.lastname}}<br>
+                {{form.phone}}<br>
+                {{form.email}}<br>
+                {{form.experience}}<br>
+                {{form.degree}}<br>
+                {{form.about}}<br>
+                {{form.age}}<br>
+                {{form.city}}<br>
+                {{form.sex}}<br>
+                <button class="btn btn-success" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
